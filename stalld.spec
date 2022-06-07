@@ -1,5 +1,5 @@
 Name:		stalld
-Version:	1.14.1
+Version:	1.15
 Release:	1
 Summary:	Daemon that finds starving tasks and gives them a temporary boost
 
@@ -51,5 +51,8 @@ allow 10 microseconds of runtime for 1 second of clock time.
 %systemd_postun_with_restart %{name}.service
 
 %changelog
+* Tue Jun 7 2022 duyiwei <duyiwei@kylinos.cn> - 1.15-1
+- upgrade to 1.15
+
 * Mon Jan 24 2022 duyiwei <duyiwei@kylinos.cn> - 1.14.1-1
 - Package init
