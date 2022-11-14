@@ -1,10 +1,10 @@
 Name:		stalld
-Version:	1.15
+Version:	1.16
 Release:	1
 Summary:	Daemon that finds starving tasks and gives them a temporary boost
 
 License:	GPLv2
-URL:		https://gitlab.com/rt-linux-tools/%{name}.git
+URL:		https://gitlab.com/rt-linux-tools/%{name}
 Source0:	https://gitlab.com/rt-linux-tools/%{name}/-/archive/v%{version}/%{name}-%{version}.tar.bz2
 
 BuildRequires:	glibc-devel
@@ -51,6 +51,9 @@ allow 10 microseconds of runtime for 1 second of clock time.
 %systemd_postun_with_restart %{name}.service
 
 %changelog
+* Mon Nov 07 2022 duyiwei <duyiwei@kylinos.cn> - 1.16-1
+- upgrade version to 1.16
+
 * Tue Jun 7 2022 duyiwei <duyiwei@kylinos.cn> - 1.15-1
 - upgrade to 1.15
 
