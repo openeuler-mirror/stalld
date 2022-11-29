@@ -1,0 +1,4 @@
+version_control: gitlab
+src_repo: rt-linux-tools/stalld
+tag_prefix: "v"
+separator: "."
