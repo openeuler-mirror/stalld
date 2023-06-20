@@ -1,0 +1,21 @@
+diff -ur stalld-1.16/Makefile stalld-1.16/Makefile
+--- stalld-1.16/Makefile	2022-04-08 05:16:30.000000000 +0800
++++ stalld-1.16/Makefile	2023-06-20 09:32:58.452486522 +0800
+@@ -2,7 +2,7 @@
+ VERSION	:=	1.16
+ 
+ INSTALL	=	install
+-CC	:=	gcc
++CC	?=	gcc
+ FOPTS	:=	-flto=auto -ffat-lto-objects -fexceptions -fstack-protector-strong \
+ 		-fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection
+ MOPTS	:=	-m64 -mtune=generic
+diff -ur stalld-1.16/tests/Makefile stalld-1.16/tests/Makefile
+--- stalld-1.16/tests/Makefile	2022-04-08 05:16:30.000000000 +0800
++++ stalld-1.16/tests/Makefile	2023-06-20 09:32:58.452486522 +0800
+@@ -1,4 +1,4 @@
+-CC	:= gcc
++CC	?= gcc
+ CFLAGS	:= -g -Wall -pthread
+ LIBS	:= -lpthread
+ 
