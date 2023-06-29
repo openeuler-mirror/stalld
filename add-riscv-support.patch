@@ -1,0 +1,12 @@
+diff -ur stalld-1.16/src/stalld.h stalld-1.16/src/stalld.h
+--- stalld-1.16/src/stalld.h	2022-04-08 05:16:30.000000000 +0800
++++ stalld-1.16/src/stalld.h	2023-06-20 10:38:33.004066225 +0800
+@@ -83,7 +83,7 @@
+ #elif __arm__
+ # define __NR_sched_setattr 380
+ # define __NR_sched_getattr 381
+-#elif __aarch64__
++#elif __aarch64__ || __riscv
+ # define __NR_sched_setattr 274
+ # define __NR_sched_getattr 275
+ #elif __powerpc__
